@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+//Route::get('/', function()
+//{
+//	return View::make('hello');
+//});
+
+Route::resource('sessions', 'SessionsController');
+Route::get('/', 'SessionsController@create');   // Login Form
