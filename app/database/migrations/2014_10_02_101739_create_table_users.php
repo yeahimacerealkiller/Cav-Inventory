@@ -15,7 +15,7 @@ class CreateTableUsers extends Migration {
 		Schema::create('users', function(Blueprint $table)
 		{
 			$table->string('username')->primary();
-            $table->string('password'); // 20 characters is long enough for a password, I think.
+            $table->string('password');
             $table->string('first_name');
             $table->string('last_name');
 			$table->timestamps();
