@@ -41,7 +41,7 @@ class SessionsController extends \BaseController {
         }
         
         // TODO Redirect to login page
-        return Redirect::route('sessions.create');
+        return Redirect::to('/');
 	}
 
 
