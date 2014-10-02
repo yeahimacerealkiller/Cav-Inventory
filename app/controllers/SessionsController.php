@@ -9,7 +9,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function index()
 	{
-		// Show login form
+		// 
 	}
 
 
@@ -20,7 +20,8 @@ class SessionsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		// Show login form
+        return View::make('sessions.create');
 	}
 
 
