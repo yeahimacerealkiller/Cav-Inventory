@@ -20,6 +20,9 @@ class SessionsController extends \BaseController {
 	 */
 	public function create()
 	{
+        
+        //TODO if already logged in, go to user welcome page
+        if(Auth::check()) return 'Welcome';
 		// Show login form
         return View::make('sessions.create');
 	}
@@ -32,10 +35,12 @@ class SessionsController extends \BaseController {
 	 */
 	public function store()
 	{
-		if (Auth::attempt(Input::only('username', 'password'))) {
+		if(Auth::attempt(Input::only('username', 'password'))) {
+            // TODO Redirect to user welcome page
             return 'Welcome';
         }
         
+        // TODO Redirect to login page
         return 'Go back';
 	}
 
