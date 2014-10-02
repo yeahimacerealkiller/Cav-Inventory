@@ -41,7 +41,7 @@ class SessionsController extends \BaseController {
         }
         
         // TODO Redirect to login page
-        return 'Go back';
+        return Redirect::route('sessions.create');
 	}
 
 
@@ -87,9 +87,11 @@ class SessionsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy()
 	{
-		//
+		Auth::logout();
+        
+        return Redirect::to('/');
 	}
 
 

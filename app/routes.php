@@ -16,5 +16,7 @@
 //	return View::make('hello');
 //});
 
+// SESSION (USER AUTH)
 Route::resource('sessions', 'SessionsController');
 Route::get('/', 'SessionsController@create');   // Login Form
+Route::get('/logout', 'SessionsController@destroy');
