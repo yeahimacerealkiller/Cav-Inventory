@@ -32,7 +32,11 @@ class SessionsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		if (Auth::attempt(Input::only('username', 'password'))) {
+            return 'Welcome';
+        }
+        
+        return 'Go back';
 	}
 
 
