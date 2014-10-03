@@ -5,5 +5,5 @@ SHOW BUTTON TO CHANGE PASSWORD
 @extends('layouts.default')
 
 @section('title')
-    Welcome, USER!
+    Welcome, {{ $username }}!
 @stop

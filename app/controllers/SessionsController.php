@@ -22,7 +22,7 @@ class SessionsController extends \BaseController {
 	{
         
         //TODO if already logged in, go to user profile page
-        if(Auth::check()) return Redirect::to('/u/{user}');
+        if(Auth::check()) return Redirect::to('/u/{username}');
 		// Show login form
         return View::make('sessions.create');
 	}

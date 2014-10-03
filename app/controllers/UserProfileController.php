@@ -41,10 +41,10 @@ class UserProfileController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($username)
 	{
 		// SHOW USER PROFILE
-        return View::make('userProfile.show');
+        return View::make('userProfile.show', ['username' => $username]);
 	}
 
 
