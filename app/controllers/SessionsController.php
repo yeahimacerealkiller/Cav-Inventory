@@ -41,7 +41,8 @@ class SessionsController extends \BaseController {
         }
         
         // TODO Redirect to login page
-        return Redirect::to('/');
+//        return Redirect::back()->withInput();
+        return Redirect::to('/')->withInput();
 	}
 
 
