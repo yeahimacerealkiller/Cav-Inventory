@@ -6,3 +6,4 @@ Final project for first semester.
 > R Daitan
 >Carl Bernal
 > Denise Lachica
+>Julito Galupo
