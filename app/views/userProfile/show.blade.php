@@ -2,7 +2,7 @@
 SHOW USER PROFILE
 SHOW BUTTON TO CHANGE PASSWORD
 -->
-@extends('default.default')
+@extends('layouts.default')
 
 @section('title')
     Welcome, USER!
