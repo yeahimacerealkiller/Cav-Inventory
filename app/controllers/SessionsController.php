@@ -14,33 +14,33 @@ class SessionsController extends \BaseController {
 
 
 	/**
-	 * Show the form for creating a new resource.
+	 * Show the form for logging in.
+     * If already logged in, go to user profile page.
+     * Otherwise, show the login form.
 	 *
 	 * @return Response
 	 */
 	public function create()
 	{
-        
-        //TODO if already logged in, go to user profile page
         if(Auth::check()) return Redirect::to('/u/' . Auth::user()->username);
-		// Show login form
+        
         return View::make('sessions.create');
 	}
 
 
 	/**
-	 * Store a newly created resource in storage.
+	 * Authenticate user.
+     * If authentic, go to user profile page
+     * Otherwise, go back to login page, with the previous inputs
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
 		if(Auth::attempt(Input::only('username', 'password'))) {
-            // TODO Redirect to user welcome page
             return Redirect::to('/u/' . Auth::user()->username);
         }
         
-        // TODO Redirect to login page
         return Redirect::to('/')->withInput();
 	}
 
@@ -82,7 +82,7 @@ class SessionsController extends \BaseController {
 
 
 	/**
-	 * Remove the specified resource from storage.
+	 * Logout user and return to login page
 	 *
 	 * @param  int  $id
 	 * @return Response
