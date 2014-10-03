@@ -1,6 +1,6 @@
 <?php
 
-class SessionsController extends \BaseController {
+class UserProfileController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function index()
 	{
-		// 
+		//
 	}
 
 
@@ -20,11 +20,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function create()
 	{
-        
-        //TODO if already logged in, go to user welcome page
-        if(Auth::check()) return 'Welcome';
-		// Show login form
-        return View::make('sessions.create');
+		//
 	}
 
 
@@ -35,13 +31,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function store()
 	{
-		if(Auth::attempt(Input::only('username', 'password'))) {
-            // TODO Redirect to user welcome page
-            return 'Welcome';
-        }
-        
-        // TODO Redirect to login page
-        return Redirect::to('/')->withInput();
+		//
 	}
 
 
@@ -53,7 +43,8 @@ class SessionsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		// SHOW USER PROFILE
+        
 	}
 
 
@@ -87,11 +78,9 @@ class SessionsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy()
+	public function destroy($id)
 	{
-		Auth::logout();
-        
-        return Redirect::to('/');
+		//
 	}
 
 

@@ -20,3 +20,8 @@
 Route::resource('sessions', 'SessionsController');
 Route::get('/', 'SessionsController@create');   // Login Form
 Route::get('/logout', 'SessionsController@destroy');
+
+// USER PROFILE PAGE
+Route::resource('userProfile', 'UserProfileController' );
+Route::get('/u/{user}', 'UserProfileController@show')->before('auth');
+Route::get('/u/{user}/edit', 'UserProfileController@edit');
