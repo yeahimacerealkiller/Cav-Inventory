@@ -21,8 +21,8 @@ class SessionsController extends \BaseController {
 	public function create()
 	{
         
-        //TODO if already logged in, go to user welcome page
-        if(Auth::check()) return 'Welcome';
+        //TODO if already logged in, go to user profile page
+        if(Auth::check()) return Route::to('/u/{user}');
 		// Show login form
         return View::make('sessions.create');
 	}

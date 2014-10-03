@@ -44,7 +44,7 @@ class UserProfileController extends \BaseController {
 	public function show($id)
 	{
 		// SHOW USER PROFILE
-        
+        return View::make('userProfile.show');
 	}
 
 
