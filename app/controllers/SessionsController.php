@@ -37,7 +37,7 @@ class SessionsController extends \BaseController {
 	{
 		if(Auth::attempt(Input::only('username', 'password'))) {
             // TODO Redirect to user welcome page
-            return 'Welcome';
+            return Redirect::to('/u/' . Auth::user()->username);
         }
         
         // TODO Redirect to login page
