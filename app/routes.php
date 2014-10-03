@@ -18,5 +18,10 @@
 
 // SESSION (USER AUTH)
 Route::resource('sessions', 'SessionsController');
-Route::get('/', 'SessionsController@create');   // Login Form
+Route::get('/', 'SessionsController@create');
+Route::get('/login', 'SessionsController@create');
 Route::get('/logout', 'SessionsController@destroy');
+
+// USER PROFILE PAGE
+Route::resource('userProfile', 'UserProfileController' );
+Route::get('/userProfile/{userProfile}', 'UserProfileController@show')->before('auth');
