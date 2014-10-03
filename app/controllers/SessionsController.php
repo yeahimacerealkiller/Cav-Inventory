@@ -22,7 +22,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function create()
 	{
-        if(Auth::check()) return Redirect::to('/u/' . Auth::user()->username);
+        if(Auth::check()) return Redirect::route('userProfile.show', ['username' => Auth::user()->username]);
         
         return View::make('sessions.create');
 	}
@@ -38,10 +38,11 @@ class SessionsController extends \BaseController {
 	public function store()
 	{
 		if(Auth::attempt(Input::only('username', 'password'))) {
-            return Redirect::to('/u/' . Auth::user()->username);
+//            return Redirect::to('/u/' . Auth::user()->username);
+            return Redirect::route('userProfile.show', ['username' => Auth::user()->username]);
         }
         
-        return Redirect::to('/')->withInput();
+        return Redirect::route('sessions.create')->withInput();
 	}
 
 
