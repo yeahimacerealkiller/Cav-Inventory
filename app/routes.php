@@ -17,11 +17,11 @@
 //});
 
 // SESSION (USER AUTH)
-Route::resource('sessions', 'SessionsController');
+//Route::resource('sessions', 'SessionsController');
 Route::get('/', 'SessionsController@create');   // Login Form
 Route::get('/logout', 'SessionsController@destroy');
 
 // USER PROFILE PAGE
-Route::resource('userProfile', 'UserProfileController' );
+//Route::resource('userProfile', 'UserProfileController' );
 Route::get('/u/{username}', 'UserProfileController@show')->before('auth');
 Route::get('/u/{username}/edit', 'UserProfileController@edit');
