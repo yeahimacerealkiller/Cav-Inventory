@@ -8,8 +8,9 @@ Template for ever page
             @yield('title')
         </title>
         <!--STYLESHEETS-->
-        {{ HTML::style('css/cav/cav-style-general.css'); }}
-        {{ HTML::style('css/pure-release-0.5.0/pure-min.css'); // Using stylesheet in Public folder }}
+        <!--Using stylesheets in Public folder-->
+        {{ HTML::style('css/cav/cav-style-general.css'); }} <!--Custom Styles That I Made-->
+        {{ HTML::style('css/pure-release-0.5.0/pure-min.css'); }}
         <!--[if lte IE 8]>
             {{ HTML::style('css/pure-release-0.5.0/grids-responsive-old-ie-min.css'); }}
         <![endif]-->
