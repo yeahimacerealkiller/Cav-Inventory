@@ -134,14 +134,19 @@ appears on the left side of the page.
         #menu .pure-menu li a:hover{
 			background: #7F8C8D;
 		}
-        #menu .pure-menu li a:focus, a:active {
+        #menu .pure-menu li a:focus {
             background: #03C9A9;
         }
 
     /*
     This styles the selected menu item `<li>`.
     */
-    #menu .pure-menu-selected,
+    #menu .pure-menu-selected
+		{
+        background: #03C9A9;
+		padding-top: 1em;
+		}	
+	
     #menu .pure-menu-heading {
         background: #34495E;
 		padding-top: 1em;
