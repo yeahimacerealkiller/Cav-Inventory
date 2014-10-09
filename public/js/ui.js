@@ -1,3 +1,4 @@
+
 (function (window, document) {
 
     var layout   = document.getElementById('layout'),
@@ -31,6 +32,7 @@
         toggleClass(menu, active);
         toggleClass(menuLink, active);
     };
+
 
 	
 }(this, this.document));

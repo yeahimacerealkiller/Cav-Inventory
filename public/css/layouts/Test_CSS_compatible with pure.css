@@ -8,130 +8,61 @@ body {
 */
 /*------Accordion effect -------*/
 
-a {
-    text-decoration: none;
+#menu li, #menu .pointer, #menu h1, #menu p {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-ul, 
-ul ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+#menu {
+  margin-bottom:30px;
 }
-
-.accmenu {
-    width: auto;
-    height: auto;
-}
-.accmenu > li > ul {
-    height: 0;
-    overflow: hidden;
+#menu h1 {
+  line-height:1.2;
+  font-size:20px;
+  background-color:rgba(255,0,0,0.3);
+  margin:0;
+  padding: 10px 10px 10px 30px;
 }
 
-.accmenu > li > a {
-    background-color: #616975;
-/*   background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(114, 122, 134)),to(rgb(80, 88, 100)));
-    background-image: -webkit-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-    background-image: -moz-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-    background-image: -o-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-    background-image: -ms-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-    background-image: linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100)); */
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#727a86', EndColorStr='#505864');
-    border-bottom: 1px solid #33373d;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #878e98;
-    -moz-box-shadow: inset 0px 1px 0px 0px #878e98;
-    box-shadow: inset 0px 1px 0px 0px #878e98;
-    width: 100%;
-    height: 2.75em;
-    display: block;
-    position: relative;
-    font-weight: 600;
-    color: #fff;
+#menu h1 a {
+  color:black;
 }
-#wrapper {  
-    font-size: 0.8125em;    /* 13/16 = 0.8125*/
+#menu li {
+  overflow:hidden;
+  height:220px;
+  border:1px #333 solid;
 }
- 
-.accmenu > li > a {
-    height: 1em;         /* 36/13 ≈ 2.75*/
+#menu p {
+  padding:0 10px;
+  color:black;
 }
-.accmenu ul li a {
-    background: #fff;
-    border-bottom: 1px solid #efeff0;
-    width: 100%;
-    height: 2.75em;
-    line-height: 2.75em;
-    text-indent: 2.75em;
-    display: block;
-    position: relative;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 0.923em;
-    font-weight: 400;
-    color: #878d95;
-}
-.accmenu ul li:last-child a {
-    border-bottom: 1px solid #33373d;
-}
-.accmenu > li > a:hover, 
-.accmenu > li > a.active {
-    background-color: #35afe3;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(69, 199, 235)),to(rgb(38, 152, 219)));
-    background-image: -webkit-linear-gradient(top, rgb(69, 199, 235), rgb(38, 152, 219));
-    background-image: -moz-linear-gradient(top, rgb(69, 199, 235), rgb(38, 152, 219));
-    background-image: -o-linear-gradient(top, rgb(69, 199, 235), rgb(38, 152, 219));
-    background-image: -ms-linear-gradient(top, rgb(69, 199, 235), rgb(38, 152, 219));
-    background-image: linear-gradient(top, rgb(69, 199, 235), rgb(38, 152, 219));
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#45c7eb', EndColorStr='#2698db');
-    border-bottom: 1px solid #103c56;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #6ad2ef;
-    -moz-box-shadow: inset 0px 1px 0px 0px #6ad2ef;
-    box-shadow: inset 0px 1px 0px 0px #6ad2ef;
-}
-.accmenu > li > a.active {
-    border-bottom: 1px solid #1a638f;
-}
-.accmenu ul > li > a span {
-    font-size: 0.857em; 
-    display: inline-block;
-    position: absolute;
-    right: 1em;
-    top: 50%; /
-    background: #fff;
-    border: 1px solid #d0d0d3;
-    line-height: 1em;
-    height: 1em;
-    padding: .4em .7em;
-    margin: -.9em 0 0 0; 
-    color: #878d95;
-    text-indent: 0;
-    text-align: center;
-    -webkit-border-radius: .769em;
-    -moz-border-radius: 769em;
-    border-radius: 769em;
-    text-shadow: 0px 0px 0px rgba(255,255,255,.01));
-}
-.accmenu > li > ul li a:before {
-    content: '▶';
-    font-size: 8px;
-    color: #bcbcbf;
-    position: absolute;
-    width: 1em;
-    height: 1em;
-    top: 0;
-    left: -2.7em;
-}
- 
-.accmenu > li > ul li:hover a,
-.accmenu > li > ul li:hover a span,
-.accmenu > li > ul li:hover a:before {
-    color: #32373D;
-}
-/*-------------------------------------------------------------*/
-
-.pure-img-responsive {
-    max-width: 100%;
-    height: auto;
+#menu li.ac_hidden p:not(.pointer) {
+  color:#fff;
 }
 
+#menu li.ac_hidden {
+  height:44px;
+}
+#menu .pointer {
+  padding:0;
+  margin:10px 0 0 6px;
+  line-height:20px;
+  width:13px;
+  position:absolute;
+}
+#menu li:not(.ac_hidden) h1 {
+  background-color:rgba(255,0,0,0.7);
+}
+
+#menu li:not(.ac_hidden) .pointer {
+  display:block;
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  transform:rotate(90deg);
+  padding:0;
+}
 /*
 Add transition to containers so they can push in and out.
 */
