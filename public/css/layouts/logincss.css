@@ -1,0 +1,21 @@
+#login { 
+	background-color: lightblue;
+	height: 170px;
+	width: 270px;
+	margin: auto;
+	margin-top: -30px;
+	border: 0;
+    -webkit-box-shadow:  1px 1px 1px 1px lightgrey;
+    -moz-box-shadow:  1px 1px 1px 1px lightgrey;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+	border-radius: 3px;
+	position: relative;
+}
+#image {
+	margin-left: 300px;
+	margin-top: 60px;
+}
+#gears {
+	margin-left: 870px;
+	margin-top: -99px;
+}

@@ -8,6 +8,7 @@ The login form that the user will see when he/she goes to the main page.
         
         {{ HTML::style('css/cav/cav-style-general.css'); }}
         {{ HTML::style('css/pure-release-0.5.0/pure-min.css'); // Using stylesheet in Public folder }}
+		{{ HTML::style('css/layouts/logincss.css'); }}
         <!--[if lte IE 8]>
             {{ HTML::style('css/pure-release-0.5.0/grids-responsive-old-ie-min.css'); }}
         <![endif]-->
@@ -17,10 +18,13 @@ The login form that the user will see when he/she goes to the main page.
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="cav-margin-auto cav-width-16">
-            <div class="cav-padded-1">
+	<div id="image">
+	{{ HTML::image('Cavitech.png') }}
+	</div>
+		<div id="login">
+		<div class="cav-margin-auto cav-width-16">
+            <div class="cav-padded-1"> 
                 {{ Form::open(['route' => 'sessions.store', 'class' => 'pure-form pure-form-stacked']) }}
-                
                     <fieldset class="pure-group">
                         {{ Form::text('username', '', ['placeholder' => 'Username', 'class' => 'pure-input-1']) }}
             
@@ -30,7 +34,11 @@ The login form that the user will see when he/she goes to the main page.
                     {{ Form::submit('Login', ['class' => 'pure-button pure-button-primary pure-input-1']) }}
                 
                 {{ Form::close() }}
+			</div>
             </div>
         </div>
+	<div id="gears">
+	{{ HTML::image('3Dgears.jpg') }}
+	</div>
     </body>
 </html>
